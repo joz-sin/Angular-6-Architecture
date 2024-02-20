@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 
@@ -7,7 +7,11 @@ import { Observable } from 'rxjs';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
-  isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset);
+export class NavbarComponent  implements OnInit {
+  isHandset: Observable<BreakpointState>
   constructor(private breakpointObserver: BreakpointObserver) {}
+  ngOnInit(): void {
+    this.isHandset = this.breakpointObserver.observe(Breakpoints.Handset);
+  }
+  
 }

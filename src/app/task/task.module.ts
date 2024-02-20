@@ -5,7 +5,10 @@ import { TaskRoutingModule } from './task-routing.module';
 import { ThresholdComponent } from './threshold/threshold.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { ScheduleComponent } from './schedule/schedule.component';
-import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+
 
 @NgModule({
   imports: [

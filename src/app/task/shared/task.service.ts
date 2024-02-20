@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Schedule } from '@app/shared/models/tasks';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class TaskService {
   constructor(private http: HttpClient) {}
 
   getTask() {
-    return this.http.get<Schedule[]>(this.configUrl);
+    return this.http.get<any[]>(this.configUrl);
   }
 
 }

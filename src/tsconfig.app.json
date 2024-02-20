@@ -1,14 +1,36 @@
+// {
+//   "extends": "../tsconfig.json",
+//   "compilerOptions": {
+//     "outDir": "../out-tsc/app",
+//     "baseUrl": "./",
+//     "module": "es2015",
+//     "types": []
+//   },
+//   "exclude": [
+//     "test.ts",
+//     "**/*.spec.ts",
+//     "**/testing/*"
+//   ]
+// }
 {
-  "extends": "../tsconfig.json",
+  "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "../out-tsc/app",
     "baseUrl": "./",
-    "module": "es2015",
-    "types": []
-  },
-  "exclude": [
-    "test.ts",
-    "**/*.spec.ts",
-    "**/testing/*"
-  ]
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "ES2022",
+      "dom"
+    ]
+  }
 }

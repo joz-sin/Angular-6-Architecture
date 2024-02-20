@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TaskService } from '@app/task/shared/task.service';
-import { Schedule } from '@app/shared/models/tasks';
-import { LoggerService } from '@app/core/logger.service';
+import { TaskService } from '../shared/task.service';
+
+
 
 @Component({
   selector: 'task/schedule',
@@ -10,7 +10,7 @@ import { LoggerService } from '@app/core/logger.service';
 })
 export class ScheduleComponent implements OnInit {
 
-  constructor(private taskService: TaskService, private logger: LoggerService) { }
+  constructor(private taskService: TaskService) { }
 
   dataSource = [
     {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
@@ -28,7 +28,7 @@ export class ScheduleComponent implements OnInit {
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
 
   ngOnInit() {
-    this.logger.log('Feting Schedule Data');
+    // this.logger.log('Feting Schedule Data');
     this.getSchedule();
   }
 

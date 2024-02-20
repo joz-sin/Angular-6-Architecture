@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   {
     path: 'task',
-    loadChildren: 'app/task/task.module#TaskModule'
+    loadChildren: () => import('./task/task.module').then(m => m.TaskModule)
   },
 ];
 
